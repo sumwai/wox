@@ -22,11 +22,11 @@ import (
 )
 
 func main () {
-    NewPM().Load("plugins").Run()
+    wox.NewPM().Load("plugins").Run()
 }
 ```
 
-以上代码将会新建一个`PlugManager`，并调用`Load`方法，遍历`./plugins/`下的所有`.so`插件，最后使用`Run`运行所有插件
+以上代码将会新建一个`PlugManager`，并调用`Load`方法，遍历`plugins`目录下的所有`.so`插件，最后使用`Run`运行所有插件
 
 ## 插件定义
 
@@ -49,6 +49,7 @@ var Plugin
 ```go
 var (
     Name = "Plugin Name"
+    Description = "Plugin Description"
     Version = "1.0.0"
 )
 ```
